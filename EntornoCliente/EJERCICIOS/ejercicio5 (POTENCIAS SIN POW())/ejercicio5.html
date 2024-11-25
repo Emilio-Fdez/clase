@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ej5.js" defer></script>
+        <style>
+            body{
+                text-align: center;}
+            p{
+                font-size: 3rem;
+                text-align: center;
+                overflow-wrap: break-word;}
+            span{
+                font-size: 30px;
+            }
+            input[type="button"]{
+                font-size: 25px;
+                padding: 5px;
+            }
+            input{
+                font-size: 20px;
+                width: 100px;
+            }
+            p+p{
+                color: green;
+            }
+        </style>
+</head>
+<body>
+    <!--potencia con bucle for usando bigint y potencia con **
+Igual que el ejercicio anterior (sin usar Math.pow()), pero las variables: 
+base y exponente serán de tipo bigint.
+En la página web se mostrarán también las variables, por ejemplo: 
+1024^77 = 621007236920283574059591795385001022102754406846678644455620
+815210420381074550 75453235136353145859118019509227885242928246863201
+7645925756577714910016472455 556817819904083399622201061142526393779
+301051996774865875003571387415264231424
+    232 cifras
+    -->
+    base: <input type="number" value="" id="base"><br><br>
+    exponente: <input type="number" value="" id="exponente"><br><br>
+
+        <button onclick="potencia()">Calcular Potencia</button> <!-- añadimos onclick al boton para que ejecute la funcion potencia del script-->
+        
+        <p id="result">(Solucion)</p> <!-- muestra el resultado -->
+        <p id="lenght">(cifras)</p> <!-- muestra el numero de cifras del resultado -->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Bases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Bases</h1>
+    <h2>Hexadecimal a Decimal</h2>
+    <textarea id="hexInput" placeholder="Ingresa un número hexadecimal"></textarea>
+    <button onclick="convertHexToDecimal()">Convertir a Decimal</button>
+    <h3>Resultado Decimal:</h3>
+    <textarea id="decimalOutput" readonly></textarea>
+
+    <h2>Decimal a Hexadecimal</h2>
+    <textarea id="decInput" placeholder="Ingresa un número decimal"></textarea>
+    <button onclick="convertDecimalToHex()">Convertir a Hexadecimal</button>
+    <h3>Resultado Hexadecimal:</h3>
+    <textarea id="hexOutput" readonly></textarea>
+
+    <script>
+        function convertHexToDecimal() {
+            const hexInput = document.getElementById('hexInput').value;
+            const decimalOutput = parseInt(hexInput, 16);
+            document.getElementById('decimalOutput').value = isNaN(decimalOutput) ? 'Número hexadecimal inválido' : decimalOutput;
+        }
+
+        function convertDecimalToHex() {
+            const decInput = document.getElementById('decInput').value;
+            const hexOutput = parseInt(decInput, 10).toString(16).toUpperCase();
+            document.getElementById('hexOutput').value = isNaN(hexOutput) ? 'Número decimal inválido' : hexOutput;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 7-octubre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="lun, 07 oct 2024 14:26:30 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 7-octubre</h2>
+<p>- En los ejercicios no se realizará código HTML con JavaScript,
+salvo que se pida expresamente.<br> El JavaScript se codificará en hoja aparte.</p>
+<p>- La etiqueta <code>&lt;script&gt;</code> irá en la cabecera (<span class="k">&lt;head&gt;</span>) del documento (no
+olvidar usar el atributo <span class="b">defer</span>)</p>
+<p>- Todo el código deberá estar bien formado y tabulado.<br>&nbsp;</p>
+<p><ol start="8"></p>
+<p><li><b>Página de color personalizado</b>.</p>
+<p>Muestra la página web con los colores de texto y fondo que te pida el usuario
+desde dos <code>input-text</code> y un botón para aplicar.</p>
+<p>Por defecto, en los input se mostrarán los colores <code>black</code> y <code>white</code>.</p>
+<div class="def w7 fs02">
+<p>Para acceder a las propiedades CSS de un elemento se usa el atributo <code>style</code>, por
+ejemplo:</p>
+<pre class="prettyprint up w7 fs03 up">let h1 = document.getElementById("titulo");
+h1.style.color = "red";
+h1.style.backgroundColor = "#EA6322";</pre>
+<p>O bien:</p>
+<pre class="prettyprint up w7 fs03 up">document.querySelector("p").style = "background-color: yellow; color: orange";</pre>
+</div>
+<p>Cambia uno de los <code>input-text</code> por un <code>input-color</code> y comprueba que funciona exactamente igual.</p>
+<p><br></li><li><b>password</b> - Página web para solicitar un password. Tendrá un <code>input-text</code>
+y un botón.</p>
+<p>Dicho password se almacenará en una variable, y será el siguiente:</p>
+<p><code>    password: secreto</code></p>
+<p>Se admitirán hasta tres intentos de acierto.<br>
+<span class="wsp">  </span>- Si errara se dará por finalizado el proceso de login mostrando un mensaje en la página y deshabilitando el botón:.<br>
+<pre class="prettyprint up w7 fs03 up">  document.querySelector("#boton").disabled = true;</pre>
+<span class="wsp">  </span>- Si acertara el password, se mostrará un mensaje de bienvenida.</p>
+<p></li><li><b>ocultar foto</b> - Crea una página con un botón y una fotografía. Al clickar en
+la foto se ocultará, y con el botón se volverá a visibilizar.</p>
+<div class="def w7 fs02">
+<p><span class="k">ocultar un elemento de la página web</span>
+<br><span class="tab"><span class="icon"></span>- estilos CSS: <code>   visibility: { <span class="b">hidden</span> | <span class="b">visible</span> }</code><br>
+<code>            display: { <span class="b">none</span> | <span class="b">inline</span> | <span class="b">block</span> | <span class="b">inline-block</span> ...}</code></span><br>
+<span class="tab"><span class="icon"></span>- atributo HTML:<code>  hidden="{ <span class="b">true</span> | <span class="b">false</span> }"</code></span>
+</p>
+</div>
+<p><br></li><li><b>&lt;table&gt; de multiplicar</b>.<br>
+Genera con JavaScript el código HTML necesario que muestre la tabla de multiplicar <b>del 1 al 10</b> (necesitarás dos bucles <code>for</code>, anidados)<br>En la primera fila y en la primera columna, se mostrarán los multiplicandos.<br>
+Por ejemplo:</p>
+<table border="1" class="t2">
+  <tr>
+    <td><span class="g">×</span></td><td><b>1</b></td><td><b>2</b></td><td><b>3</b></td>
+  </tr>
+  <tr>
+    <td><b>1</b></td><td><span class="r">1</span></td><td><span class="r">2</span></td><td><span class="r">3</span></td>
+  </tr>
+  <tr>
+    <td><b>2</b></td><td><span class="r">2</span></td><td><span class="r">4</span></td><td><span class="r">6</span></td>
+  </tr>
+  <tr>
+    <td><b>3</b></td><td><span class="r">3</span></td><td><span class="r">6</span></td><td><span class="r">9</span></td>
+  </tr>
+</table>
+<div class="nota w6">
+<p>Es posible que <i>el navegador intente renderizar correctamente la tabla</i> si la vas
+escribiendo poco a poco sobre el documento, obteniéndose un resultado no deseado.</p>
+<p>Guarda <b>todo el HTML</b> que conforma la tabla <b>en una variable</b> <code>String</code>, y luego
+plásmalo sobre la página web en el <span class="b">innerHTML</span> de algún elemento.</p>
+</div>
+<p></li><li><b>Operador ternario</b>.</p>
+<p>Utilizando <b>un único operador ternario</b> muestra la calificación en función de una nota. 
+<code>     Nota menor de 5:    <span class="b">Suspenso</span>
+     Nota de 5 a algo menor de 7: <span class="b">Aprobado</span>
+     Nota de 7 a algo menor de 9: <span class="b">Notable</span>
+     Nota entre 9 y 10:  <span class="b">Sobresaiente</span></code></p>
+<p>Debe validarse que el usuario proporciona una <b>entrada numérica</b> y además está
+comprendida <b>entre 0 y 10</b>.<br>
+En caso de que la entrada sea incorrecta, se informará al usuario del error cometido.<br>&nbsp;</p>
+<p></li><li><b>Imágenes en posición aleatoria</b>. Sitúa 3 imágenes en la página web que cambien
+a una posición aleatoria cada vez que se pulsa un botón. </p>
+<p>Necesitas las propiedades CSS:<br>
+<code>    position: <i>absolute</i>
+    top: &lt;<i>distancia al margen superior</i>&gt;
+    left: &lt;<i>distancia al margen izquierdo</i>&gt;</code></p>
+<div class="nota">
+<p>El ancho/alto de la parte de la ventana que visualiza el documento, se puede obtener
+con:<br>
+<code>   window.</code><span class="b">innerWidth</span><br>
+<code>   window.</code><span class="b">innerHeight</span></p>
+</div>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</article>
+</body>
+</html>

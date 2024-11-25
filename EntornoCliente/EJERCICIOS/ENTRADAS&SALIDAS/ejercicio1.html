@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicio1.js" defer></script>
+</head>
+<body>
+  <!--
+  Crea un formulario con un cuadro de texto y un botón. 
+  En el cuadro de texto excribiremos nuestro nombre, 
+  y al pulsar el botón nos mostrará un mensaje de bienvenda en un <h1>.  
+  -->  
+    <form>
+        <label>Dime tu nombre</label>
+        <input id="nombre" value="">
+        <input type="button" onclick="saludar()" value = "Salúdame">
+        <!-- button onclick="saludar()" return false; (para que no se envie)-->
+    </form>
+
+    <h1 id="saludo"></h1>
+</body>
+</html>

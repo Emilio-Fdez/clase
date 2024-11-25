@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 22-octubre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="mar, 22 oct 2024 14:57:18 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 22-octubre</h2>
+<p>En los siguientes ejercicios debes utilizar escuchadores de eventos para manejarlos.<br>
+Por ejemplo:</p>
+<p>Obtenemos la referencia a un elemento HTML:</p>
+<pre class="prettyprint up w7 fs03 up t0">const boton = document.getElementById("boton");</pre>
+<p>Manejamos el evento "click":</p>
+<pre class="prettyprint up w7 fs03 up t0">// Con referencia a función
+boton.addEventListener("click", funcion_Manejadora_del_Evento );</pre>
+<pre class="prettyprint up w6 fs03 up t0">// Con función flecha
+boton.addEventListener("click", () =&gt; {
+ ... 
+});</pre>
+<pre class="prettyprint up w6 fs03 up t0">// Con función "normal"
+boton.addEventListener("click", function() {
+	...
+});</pre>
+<p>Si necesitas información del evento, debes recogerlo como argumento (ejercicio 21)</p>
+<pre class="prettyprint up w6 fs03 up t0">boton.addEventListener("click", ev =&gt; {
+ ...
+});</pre>
+<pre class="prettyprint up w6 fs03 up t0">boton.addEventListener("click", function(ev) {
+	...
+});</pre>
+<p><ol start="19"><li><b>filtros para imágenes</b><br>
+Utiliza dos filtros CSS para imágenes para aplicarlos mediante
+deslizadores <code>input-range</code>.</p>
+<p><img src="img/slider-con-filtros.png" class=""></p>
+<pre class="notaB">  <code>filter: <i>tipo(valor)</i></code>    <a href="https://developer.mozilla.org/es/docs/Web/CSS/filter">MDN</a>  -  <a href="https://www.w3schools.com/cssref/css3_pr_filter.php">w3schools</a>
+  <code>&lt;input type="range"  </code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">MDN</a>   -   <a href="https://www.w3schools.com/tags/att_input_type_range.asp">w3schools</a></pre>
+<p><br></li><li><b>chat para solitarios</b><br>
+Crea un formulario como el de la figura, tendrá un <code>textarea</code> un <code>input-text</code>
+y un botón.</p>
+<p>Lo que se vaya escribiendo en el cuadro de texto se irá añadiendo al textarea cada
+vez que pulsemos el botón.</p>
+<p><img src="img/chat-solitario.png" class=""></p>
+<p>- Cada vez que se pulse el botón también se vaciará el cuadro de texto, y se le
+devolverá el enfoque.</p>
+<div class="notaB w6">
+<p>Para recuperar el foco en el cuadro de texto cuando se puls "Enviar",
+el input text debe invocar su método <code>focus()</code>:</p>
+<pre class="prettyprint up w3 fs03 up t1">inpTxt.focus();</pre>
+</div>
+<p></li><li><b>keydown</b></p>
+<div class="def w7">
+<p>Cada vez que pulsamos una tecla se generan los eventos <code>keydown</code> y <code>keyup</code>.<br>
+(<a href="https://developer.mozilla.org/es/docs/Web/API/Element/keydown_event">keydown en MDN</a>).</p>
+</div>
+<p>Modifica el chat de manera que, cada vez que se pulse la tecla <span class="r">Enter</span> en el cuadro
+de texto se lleven a cabo las mismas acciones que cuando se pulsa el botón "Enviar".</p>
+<p>Abajo tienes un ejemplo de uso de <code>keydown</code> y detección de la tecla Enter:</p>
+<pre class="prettyprint up w3 fs03 up t1">// en la propiedad "key" del evento, se guarda la tecla pulsada
+inpTxt.addEventListener( "keydown", ev =&gt; {
+   if(ev.key == "Enter") alert("Has pulsado Enter");
+})</pre>
+<p></li><li><b>nombres de día y mes en castellano</b><br>
+Pon un <code>input-date</code> en una página web. Al seleccionar una fecha, p.ej <span class="r">22-oct-2024</span>,
+se mostrará en la parte inferior:</p>
+<p><span class="wsp">                   </span> <big><span class="bb">El 22 de octubre del 2024 es martes<span class="b"></big></p>
+<p>▸ Puedes programar <code>oninput</code> / <code>onchange</code>
+ </p>
+<pre class="notaR w5"> <span class="k">OjO</span> con la sintaxis de las fechas en el <code>input-date</code>
+ 
+       &lt;<b>input</b> <span class="b">type</span>="date" <span class="b">value</span>=<span class="rr">"2024-12-31"</span>&gt;</pre>
+<pre class="notaB w4 t2">  <code>&lt;input type="date</code>:     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">MDN</a>  -  <a href="https://www.w3schools.com/tags/att_input_type_date.asp">w3schools</a></pre>
+<p><span class="wsp"><u>indicaciones</u>:
+        - Puedes guardar los nombres de día y de mes en arrays: <code>
+         <b>const</b> dias= [ "lunes", "martes", ...]</code>
+        - Guarda la fecha obtenida con el <code>input-date</code> en un objeto javascript <code>Date</code>. Abajo tienes
+          dos formas de <span class="k">construir objetos</span> de esta "clase":<code>
+         <b>const</b> date = <b>new</b> Date(<i>año</i>, <i>mes</i>, <i>día</i>);
+         <b>const</b> fecha = <b>new</b> Date(<i>"año-mes-día"</i>);</code>
+          y utiliza los <span class="k">métodos</span> del objeto <code>Date</code> que devuelven el <i>número de día</i> y <i>número de mes</i>.</span></p>
+<pre class="notaB w4 t2">   objeto Date:          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date">MDN</a>  -  <a href="https://www.w3schools.com/js/js_dates.asp">w3schools</a></pre>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</article>
+</body>
+</html>

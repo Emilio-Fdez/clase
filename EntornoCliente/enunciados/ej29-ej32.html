@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 5-noviembre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="mar, 05 nov 2024 14:01:28 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 5-noviembre</h2>
+<p><br><br><br><ol start="29"><li><b>función para visualizar arrays</b><br>
+Crea una function showArray(<i>Array</i>) que visualice los elementos de un array de 1 ó 2 dimensines.<br>&nbsp;</p>
+<p>Ejemplo:</p>
+<pre class="prettyprint">const uno = [ 1, 2, 2 ];
+const dos = [ [1, 2], [1, 2, 3], [1, 2, 3, 4] ];
+
+showArray(uno)
+   1 2 2
+showArray(dos)
+   1 2
+   1 2 3
+   1 2 3 4</pre>
+<p><br></li><li><b>Array triangular</b><br>
+Crea una función para generar un array triangular, con tantas filas como se indique
+en el argumento:</p>
+<pre class="prettyprint">let x = creaArrayTriangular(4);
+showArray(x)
+1
+1, 2
+1, 2, 3
+1, 2, 3, 4</pre>
+<p></li><li><b>Array del buscaminas</b><br>
+Crea una función para crear un array que podría servir para el juego buscaminas.</p>
+<p>Recibirá como argumentos las dimensiones y el número de minas que deseamos que aparezcan
+en el tablero.</p>
+<pre class="prettyprint lh6">let arr = initBuscaminas( 7, 11, 15 );   // 7 filas, 11 columnas y 15 minas
+showArray(arr);
+ 0 0 0 0 * 0 0 0 * 0 0 
+ * 0 0 0 0 0 * 0 0 * 0
+ 0 0 0 0 0 * * 0 * 0 0
+ 0 0 0 0 0 0 0 0 0 0 0
+ * 0 0 0 * 0 * 0 0 0 0
+ 0 * 0 0 0 0 0 0 0 * 0
+ 0 0 0 0 * 0 0 0 * 0 0</pre>
+<p></li><li><b>Minas alrededor</b><br>
+Modifica el código anterior de manera que cada celda del array almacene un número
+que indique el número de minas que tiene alrededor.</p>
+<pre class="prettyprint lh6">let arr = initBuscaminas( 7, 10, 15 );   // 7 filas, 10 columnas y 15 minas
+showArray(arr);
+ 1 1 0 1 * 2 1 2 * 2 1
+ * 1 0 1 2 4 * 4 3 * 1
+ 1 1 0 0 1 * * 3 * 2 1
+ 1 1 0 1 2 4 3 3 1 1 0
+ * 2 1 1 * 2 * 1 1 1 1
+ 1 * 1 2 2 3 1 2 2 * 1
+ 1 1 1 1 * 1 0 1 * 2 1</pre>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</article>
+</body>
+</html>

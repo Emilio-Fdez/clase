@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="buscaMinas.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        td.revealed {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscaminas</h1>
+    <table id="tablero"></table>
+    <button id="cambiar">Cambiar Minas</button>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 18-noviembre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="mar, 19 nov 2024 14:59:56 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 18-noviembre</h2>
+<p><ol start="33"><li><b>Alarma</b><br>
+Programa un script que lance una alarma a cierta hora que establezcamos desde un
+cuadro de tiempo (<code>input-time</code>)</p>
+<p><img src="img/generar-alarma.png" class=""></p>
+<p><b>indicación</b>: Halla la diferencia en milisegundos entre la hora actual y la hora
+del cuadro de tiempo. Esa diferencia va al <code>setTimeout</code>.
+            </p>
+<ul>
+  <li><u><i>Recordatorio</i></u>: métodos para obtener horas, minutos, segundos:</li>
+</ul>
+<pre class="prettyprint w5 up fs0 t1">  date = new Date()
+  let hNow = date.getHours();
+  let mNow = date.getMinutes();
+  let sNow = date.getSeconds();</pre>
+<p><li><b>Callbacks</b><br>
+Programa cuatro funciones para realizar las <b>operaciones</b> básicas de:<br>
+<code>     let s = <b>suma</b>(x, y);
+     let r = <b>resta</b>(x, y);
+     let m = <b>multiplica</b>(x, y);
+     let d = <b>divide</b>(x, y);
+</code></p>
+<p>Crea una función <code><b>calc</b>()</code> para realizar cálculos usando las <b>operaciones</b> anteriores como <i>callback</i>:
+<code>      c = calc(<i>operacion</i>, x, y)
+</code>
+por ejemplo:</p>
+<pre class="prettyprint w6">	let s = calc(suma, 5, 4);  // s = 9</pre>
+<p><br><span class="wsp">      * Haciendo uso de la función <code>calc</code>, realiza los siguientes cálculos:</span></p>
+<pre class="prettyprint w6">  5 + 4                               // resultado: 9
+  5 + 4 - 1                           // resultado: 8
+  ( 3 + (2 * 2) + 7 ) / 2             // resultado: 7
+  ( (8 + 6) / (9 - 2) ) * 3           // resultado: 6</pre>
+<p>muestre los resultados en <code>&lt;h1&gt;</code>.</p>
+<p>Haz los cálculos en una función denominada <code><b>main</b>()</code> que se ejecute al terminar
+de cargar la página web, en el evento <code>onload</code> de window:</p>
+<pre class="prettyprint w6">window.onload = main;</pre>
+<p><li><b>semáforo</b><br>
+Haz un programa que te muestre un móvil que se desplaza de izquierda a derecha constantemente,
+de manera que cuando llega al final de la pantalla vuelva a aparecer por la izquierda.</p>
+<p><img src="img/semaforos.webp" class=""></p>
+<p>Programa un botón para regular el movimiento, a modo de semáforo, de manera que al
+pulsarlo se detenga el móvil a la altura del botón (más o menos). Y al volverlo a
+pulsar reanude su marcha.<br>&nbsp;</p>
+<p><li><b>callbacks asíncronas</b><br>
+Vamos a suponer que las <b>operaciones</b> se realizan en algún servidor de la red,
+y tarda 1 ms en enviar la respuesta.</p>
+<p>Convierte en asíncronas las operaciones, de manera que el resultado de cada operación
+(<i>suma</i>, <i>resta</i>, <i>multiplica</i>, <i>divide</i>) se proporcione al cabo de 1 ms.</p>
+<p>¿Sigue funcionando el programa anterior de cálculo?</p>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+<p>&nbsp;</p>
+</article>
+</body>
+</html>

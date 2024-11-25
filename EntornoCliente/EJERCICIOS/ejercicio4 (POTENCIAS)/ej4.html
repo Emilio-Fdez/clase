@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="ejercicio4.js" defer></script>
+        <style>
+            body{
+                text-align: center;}
+            p{
+                font-size: 5rem;
+                color: magenta;
+                text-align: center;}
+        </style>
+    </head>
+    <body>
+        <!--potencia con bucle for. Define dos variables: base y exponente. 
+        Utilizando el bucle for muestra el resultado del cálculo: baseexponente.
+            En la página web se mostrarán también las variables, es decir, 
+            se visualizará algo como, por ejemplo:   37 = 2178
+
+            - ¿Cuánto vale 1024^77?
+            - ¿Cuánto vale 77^1024?
+            
+            potencia con método pow y operador **. En el mismo ejercicio, 
+            muestra también la potencia baseexponente usando el método Math.pow() 
+            y el operador **
+            -->
+            
+        base: <input type="number" value="" id="base"><br><br>
+        exponente: <input type="number" value="" id="exponente"><br><br>
+
+        <button onclick="potencia()">Calcular Potencia</button>
+        <button onclick="potenciaPow()">Calcular Potencia con Pow</button>
+        
+        <p>(Solucion)</p>
+    </body>
+</html>

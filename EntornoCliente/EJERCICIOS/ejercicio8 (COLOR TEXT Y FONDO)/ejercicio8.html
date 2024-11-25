@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script defer src="ej8.js"></script>
+    </head>
+    <body>
+    <!--Página de color personalizado.
+    Muestra la página web con los colores de texto y fondo que te pida el usuario desde dos input-text 
+    y un botón para aplicar.
+
+    Por defecto, en los input se mostrarán los colores black y white.
+
+    Para acceder a las propiedades CSS de un elemento se usa el atributo style, por ejemplo:
+
+    let h1 = document.getElementById("titulo");
+    h1.style.color = "red";
+    h1.style.backgroundColor = "#EA6322";
+    O bien:
+
+    document.querySelector("p").style = "background-color: yellow; color: orange";
+    Cambia uno de los input-text por un input-color y comprueba que funciona exactamente igual.-->
+        <span>color de texto</span><input type="color" name="texto">
+        <span>color de fondo</span><input type="color" name="fondo" value="#FFFFFF">
+        <button onclick="cambio()">Cambiar</button>
+
+        <h1>Texto de ejemplo</h1>
+
+    </body>
+</html>

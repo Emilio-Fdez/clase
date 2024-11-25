@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 10-octubre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="mar, 15 oct 2024 14:57:02 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 10-octubre</h2>
+<p>En los siguientes ejercicios debes utilizar funciones anónimas para programar
+los eventos (click, mouseenter, input, ...). Esa función anónima se asignará al
+manejador de evento del elemento. Por ejemplo:</p>
+<pre class="prettyprint up w7 fs03 up t1">  const elem = document.getElementById("botijo");
+  elem.onclick = function() {
+     ...
+  }</pre>
+<p><ol start="14"><li><b>evento <code>onclick</code></b><br>
+Crea una bandera tricolor con 3 <code>&lt;div&gt;</code>, de manera que al hacer click sobre cada
+de las bandas, ésta cambie a un color aleatorio.
+<img src="img/bandera.png" class=""></p>
+<p></li><li><b>evento <code>onmouseenter</code></b><br>
+Crea una tabla con al menos 50 celdas. Haz que al pasar el ratón por encima de las
+celdas, éstas cambién de color a un color aleatorio.
+<img src="img/tabla_colores.png" class=""></p>
+<p></li><li><b>evento <code>oninput</code></b><br>
+Crea una página web con una cabecera <code>&lt;h1&gt;</code> y un deslizador (<code>input-range</code>).<br>
+Muestra en la cabecera el valor del deslizador según lo vas moviendo.</p>
+<p>Ejemplos de deslizador:</p>
+<pre class="prettyprint up w7 fs03 up t1">&lt;input type="range" min="0" max="255" value="0" orient="vertical"&gt;
+&lt;input type="range" min="0" max="1" value="1" step="0.05"&gt;</pre>
+<div class="notaB w4">
+<p><span class="wsp">    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">Deslizador en MDN</a>   -   <a href="https://www.w3schools.com/tags/att_input_type_range.asp">Deslizador en w3school</a></span></p>
+</div>
+<p></li><li><b>evento <code>onchange</code></b><br>
+Introduce varios colores en un cuadro de lista desplegable (<code>select, option</code>) de
+manera que al elegir uno de ellos, un <code>div</code> que habrá en la página cambiará a ese color.
+<img src="img/cambio-color-cuadro-desplegable.png" class=""></p>
+<div class="notaB w5">
+<p><span class="wsp"> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">&lt;select&gt; + &lt;option&gt; (MDN)</a>    -    <a href="https://www.w3schools.com/tags/tag_select.asp">&lt;select&gt; + &lt;option&gt; (w3schools)</a></span></p>
+</div>
+<p></li><li><b>algoritmo</b></p>
+<p>Realiza una formulario con dos <code>textarea</code> que nos permita convertir de base
+hexadecimal a decimal y viceversa cualquier número con cualquier cantidad de
+dígitos.</p>
+<p><img src="img/conversion-decimal--hexadecimal.png" class=""></p>
+<p>Debes utilizar el algoritmo que ya conoces de cambio de base, con el tipo de
+datos <code>Bigint</code>, pues JavaScript tiene una precisión de 16 dígitos.</p>
+<div class="nota w6">
+<p>JavaScript puede convertir números (<code>Number</code>) a cualquier otra base (&lt;=36)
+con el método <code><span class="b">(número).<b>toString</b>(base)</span></code>, pero si el número es muy grande,
+se truncará a una precisión de 16 dígitos.</p>
+</div>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</article>
+</body>
+</html>

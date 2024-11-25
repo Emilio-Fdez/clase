@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script defer src="ej9.js"></script>
+    </head>
+    <body>
+        <!--password - Página web para solicitar un password. Tendrá un input-text 
+        un botón.
+        Dicho password se almacenará en una variable, y será el siguiente:
+        password: secreto
+        Se admitirán hasta tres intentos de acierto.
+        - Si errara se dará por finalizado el proceso de login mostrando un mensaje en la página y deshabilitando el botón:.
+        document.querySelector("boton").disabled = true;
+        - Si acertara el password, se mostrará un mensaje de bienvenida.-->
+        <h1>Login</h1>
+        <span>Contraseña: </span><input type="text" name="password">
+        <button onclick="password()">Enviar</button>
+        <h1 id="result"></h1>
+        <p></p>
+        
+    </body>
+</html>

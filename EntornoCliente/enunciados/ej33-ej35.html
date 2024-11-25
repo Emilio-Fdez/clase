@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Ejercicios 12-noviembre</title>
+<meta charset="utf-8">
+<meta http-equiv="last-modified" content="mié, 13 nov 2024 12:34:58 GMT">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/opt/jck/js/DEBUG.js"></script>
+<link rel="stylesheet" href="/opt/jck/css/estilo.css">
+</head>
+<body>
+<article>
+<h2>Ejercicios 12-noviembre</h2>
+<p><ol start="33"><li><b>función para visualizar array en tabla</b><br>
+Crea una función que te devuelva una tabla HTML a partir de un array:
+<br><span class="tab"><span class="icon"></span><code>htmlTable = createTable(<i>Array</i>, <i>String id</i>, <i>String clase</i>);</code></span>
+</p>
+<p>Recibirá dos argumentos:
+<br><span class="tab"><span class="icon"></span>- Un <b>array</b>, que será de 1 ó 2 dimensiones. No se realizarán comprobaciones de
+dimensión, se supone que los programadores que usen esta función tendrán conocimientos
+de lo que es una <code>&lt;table&gt;</code> HTML.</span><br>
+<span class="tab"><span class="icon"></span>- Dos <b>String</b> opcionales, que serán el identificador de la tabla (valor del atributo <code>id</code>)
+y su clase CSS (valor del atributo <code>class</code>).</span>
+</p>
+<p><u><b>Ejemplo de funcionamiento</b></u></p>
+<pre class="prettyprint w8 up fs0">const div = document.getElementById("contenedorTabla");
+div.appendChild( createTable( initBuscaminas(7,11, 15), "buscaminas" ) );</pre>
+<div class="up t09">
+<p><img src="img/ArrayBuscaminas.png" class=""></p>
+</div>
+<pre class="nota w4">El código Unicode de la bomba es <span class="k">U+1F4A3</span></pre>
+<p>
+<span class="tab"><span class="icon"></span>★ Para probar que todo funciona correctamente, crea un array buscaminas de una
+única dimensión.</span>
+</p>
+<p><li><b>cesta de la compra (I)</b><br>
+Haz un programa con un <code>input-text</code> y un botón "<i>Añadir a la cesta</i>".<br>
+En la parte inferior habrá una lista numerada (<code>&lt;ol id="cesta"&gt;</code>), en principio vacía.</p>
+<p><img src="img/160_Cesta-compra-1.webp" class=""></p>
+<p>Cada vez que pulsemos el botón, se añadirá el texto del <code>input-text</code> en la lista
+numerada.</p>
+<p><li><b>cesta de la compra (II)</b><br>
+En el ejercicio anterior añade un <code>select-option</code> donde también se muestren
+los elementos que hay en la cesta.</p>
+<p>Al lado de este <code>select</code>, añade un segundo botón con texto "<i>Eliminar</i>".
+<img src="img/160_cesta-compra.apng"; style="float:right; margin-top:-2rem;" width="268"></p>
+<p>Cuando se pulse este botón, se eliminará de la cesta (de la lista <code>ol</code> y del <code>select</code>)
+el producto que estuviera seleccionado.<br><br><br>&nbsp;</p>
+<p></li></ol><br>&nbsp;</p>
+<p><style>
+ol { padding-top: 0; }
+li { padding:10px 25px 25px 25px; }
+li:nth-child(2n+1) { background:#F4F4FA; }
+li:nth-child(2n) { background:#FFFFdA; }
+li { margin-bottom:-1rem; }
+</style></p>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</article>
+</body>
+</html>

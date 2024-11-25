@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicio4pow.js" defer></script>
+        <style>
+            body{
+                text-align: center;}
+            p{
+                font-size: 3rem;
+                text-align: center;}
+            span{
+                font-size: 30px;
+            }
+            input[type="button"]{
+                font-size: 25px;
+                padding: 5px;
+            }
+            input{
+                font-size: 20px;
+                width: 100px;
+            }
+            p+p{
+                color: red;
+            }
+            p+p+p{
+                color: green;
+            }
+
+        </style>
+</head>
+<body>
+    <!--potencia con método pow y operador **. En el mismo ejercicio, 
+    muestra también la potencia baseexponente usando el método Math.pow() y el operador **.
+    Muestra los resultados en distintos colores:-->
+        <span>base: <input type="number" value="" id="base"></span><br><br>
+        <span>exponente: <input type="number" value="" id="exponente"></span><br><br>
+
+        <!--<button onclick="potencia()">Calcular Potencia</button>
+        <button onclick="potenciaSimbolo()">Calcular Potencia**</button>
+        <button onclick="potenciaPow()">Calcular Potencia con Pow</button>
+        <p>(Solucion)</p>-->
+
+        <input type="button" onclick="calcular()" value="Calcular">
+
+        <p id="potencia">(Solucion)</p>
+        <p id="potenciaPow">(Solucion con Pow)</p>
+        <p id="potenciaSimbolo">(Solucion con **)</p>
+
+
+</body>
+</html>
