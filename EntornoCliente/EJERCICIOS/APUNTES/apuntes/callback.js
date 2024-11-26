@@ -34,9 +34,5 @@
     }
 
     let hi = setInterval(mover, 1)
-
-    // setTimeout(clearInterval,1000,hi)
-
-    /* setTimeout(() => {
-        clearInterval(hi)
-    }, 10000) */
+    // clearInterval(hi)
+    setTimeout(clearInterval,5000,hi)
